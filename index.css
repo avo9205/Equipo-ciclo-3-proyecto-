@@ -12,5 +12,11 @@ h1{
 .boton{
 		background-color: limegreen;
 		color: black;
-		
+
 	} 
+
+.imagen .imagen_ryu{
+
+	height: 540px;
+	width: 910px;
+}	
