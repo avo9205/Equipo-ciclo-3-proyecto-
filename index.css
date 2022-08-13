@@ -5,11 +5,12 @@
 		margin: 0;
 	}
 h1{
-		background-color: green;
-		color: red;
+		background-color: blueviolet;
+		color: black; 
 	}
 
 .boton{
-		background-color: lightblue;
-		color: darkblue;
+		background-color: limegreen;
+		color: black;
+		
 	} 
