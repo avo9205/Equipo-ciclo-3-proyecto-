@@ -15,7 +15,7 @@ public class taskController {
     }
 
     @RequestMapping(value = ("/contact"))
-    public String prueba(@PathVariable long id) {
+    public String prueba_N1(@PathVariable long id) {
         return "hola mundo";
 
     }
