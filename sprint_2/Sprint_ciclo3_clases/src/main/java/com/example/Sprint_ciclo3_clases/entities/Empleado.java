@@ -1,23 +1,22 @@
 
 package com.example.Sprint_ciclo3_clases.entities;
 
-
 public class Empleado {
-    
+
     private String nombreEmpleado;
     private String correo;
     private String cargo;
     private String empresa;
-    
-    public Empleado(String nombreEmpleado, String correo , String cargo, String empresa){
-        
+
+    public Empleado(String nombreEmpleado, String correo, String cargo, String empresa) {
+
         this.nombreEmpleado = nombreEmpleado;
         this.correo = correo;
         this.cargo = cargo;
         this.empresa = empresa;
     }
-    
-    //====getter and setter====
+
+    // ====getter and setter====
 
     public String getNombreEmpleado() {
         return nombreEmpleado;
@@ -50,7 +49,5 @@ public class Empleado {
     public void setEmpresa(String empresa) {
         this.empresa = empresa;
     }
-    
-    
-    
+
 }

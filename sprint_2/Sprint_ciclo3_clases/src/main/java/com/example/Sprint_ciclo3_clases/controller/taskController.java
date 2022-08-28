@@ -7,11 +7,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class taskController {
-    
-    @RequestMapping(value= ("/prueba/{id}"))
-    public String prueba(@PathVariable long id){
+
+    @RequestMapping(value = ("/prueba/{id}"))
+    public String prueba(@PathVariable long id) {
         return "hola mundo";
-        
+
     }
-    
+
+    @RequestMapping(value = ("/contact"))
+    public String prueba(@PathVariable long id) {
+        return "hola mundo";
+
+    }
+
 }
