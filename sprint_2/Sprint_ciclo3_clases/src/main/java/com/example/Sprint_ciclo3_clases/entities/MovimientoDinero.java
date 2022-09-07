@@ -1,10 +1,25 @@
 package com.example.Sprint_ciclo3_clases.entities;
 
+import javax.persistence.*;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "MovimientoDinero")
 public class MovimientoDinero {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private  Long Id;
+    @Column(name = "monto")
     private double monto;
     //private double montoPositivoNegativo;
+    @Column(name = "movimiento")
     private double movimiento;
+    @Transient
     private Empleado usuario;
+    //constructor vacio
+    public MovimientoDinero(){
+
+    }
 
 //contructor
     public MovimientoDinero(double monto, double movimiento, Empleado usuario) {

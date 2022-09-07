@@ -1,13 +1,29 @@
 
 package com.example.Sprint_ciclo3_clases.entities;
 
+import net.bytebuddy.dynamic.loading.InjectionClassLoader;
+
+import javax.persistence.*;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Empleados")
 public class Empleado {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO )
+    private Long Id;
+    @Column(name = "nombreEmpleado")
     private String nombreEmpleado;
+    @Column(name = "correo")
     private String correo;
+    @Column(name = "cargo")
     private String cargo;
+    @Transient
     private Empresa empresa;
+    //constructor vacio
+    public Empleado(){
 
+    }
     public Empleado(String nombreEmpleado, String correo, String cargo, Empresa empresa) {
 
         this.nombreEmpleado = nombreEmpleado;
