@@ -1,17 +1,30 @@
 
 package com.example.Sprint_ciclo3_clases.entities;
 
+import javax.persistence.*;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "Empresa")
 public class Empresa {
-    
-    private String empresa;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long Id;
+    @Column(name = "nombreEmpresa")
+    private String nombreEmpresa;
+    @Column(name = "direccion")
     private String direccion;
+    @Column(name = "telefono")
     private double telefono;
+    @Column(name = "nit")
     private double nit;
+
+    public Empresa(){
+
+    }
+    public Empresa(String nombreEmpresa, String direccion , double telefono, double nit){
     
-    public Empresa(String empresa, String direccion , double telefono, double nit){
-    
-    this.empresa = empresa;
+    this.nombreEmpresa = nombreEmpresa;
     this.direccion = direccion;
     this.telefono = telefono;
     this.nit = nit;
@@ -20,11 +33,11 @@ public class Empresa {
     //====getter and setter====
 
     public String getEmpresa() {
-        return empresa;
+        return nombreEmpresa;
     }
 
     public void setEmpresa(String empresa) {
-        this.empresa = empresa;
+        this.nombreEmpresa = nombreEmpresa;
     }
 
     public String getDireccion() {

@@ -6,9 +6,9 @@ public class Empleado {
     private String nombreEmpleado;
     private String correo;
     private String cargo;
-    private String empresa;
+    private Empresa empresa;
 
-    public Empleado(String nombreEmpleado, String correo, String cargo, String empresa) {
+    public Empleado(String nombreEmpleado, String correo, String cargo, Empresa empresa) {
 
         this.nombreEmpleado = nombreEmpleado;
         this.correo = correo;
@@ -42,11 +42,11 @@ public class Empleado {
         this.cargo = cargo;
     }
 
-    public String getEmpresa() {
+    public Empresa getEmpresa() {
         return empresa;
     }
 
-    public void setEmpresa(String empresa) {
+    public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
     }
 
