@@ -1,5 +1,7 @@
 package com.example.Sprint_ciclo3_clases.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import javax.persistence.Table;
 
@@ -13,7 +15,13 @@ public class MovimientoDinero {
     private double monto;
     //private double montoPositivoNegativo;
     @Column(name = "movimiento")
-    private double movimiento;
+    private String movimiento;
+   /* @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "nombreEmpleado", nullable = false)
+    @JsonIgnoreProperties(value = "empleado") //se lo agregué para no ver ese ciclo infinito en Json
+    private Empresa empresa;
+    /*
+    */
     @Transient
     private Empleado usuario;
     //constructor vacio
@@ -22,12 +30,18 @@ public class MovimientoDinero {
     }
 
 //contructor
-    public MovimientoDinero(double monto, double movimiento, Empleado usuario) {
-        this.setMonto(monto);
-        this.setMovimiento(movimiento);
-        this.setUsuario(usuario);
+
+    public MovimientoDinero(double monto, String movimiento, Empleado usuario) {
+        this.monto = monto;
+        this.movimiento = movimiento;
+        this.usuario= usuario;
     }
 
+  /*  public Empresa getEmpresa(){
+        return empresa;}
+    public  void  setEmpresa(Empresa empresa){
+        this.empresa= empresa;
+    } */
 
     public double getMonto() {
         return monto;
@@ -37,11 +51,11 @@ public class MovimientoDinero {
         this.monto = monto;
     }
 
-    public double getMovimiento() {
+    public String getMovimiento() {
         return movimiento;
     }
 
-    public void setMovimiento(double movimiento) {
+    public void setMovimiento(String movimiento) {
         this.movimiento = movimiento;
     }
 
@@ -54,7 +68,13 @@ public class MovimientoDinero {
     }
 
     public double montoPositivioNegativo(double monto){
-        return  monto*-1;
+        if(monto >= 0){
+            return  monto;
+        }
+        else{
+            return  monto;
+        }
+
 
     }
 }

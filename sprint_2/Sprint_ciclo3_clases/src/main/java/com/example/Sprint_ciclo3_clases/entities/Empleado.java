@@ -18,9 +18,17 @@ public class Empleado {
     private String correo;
     @Column(name = "cargo")
     private String cargo;
+
+    /*
+    @ManyToOne
+    @JoinColumn(name = "nombreEmpresa")
+    private Empresa empresa;
+    */
+
+    //constructor vacio
+
     @Transient
     private Empresa empresa;
-    //constructor vacio
     public Empleado(){
 
     }

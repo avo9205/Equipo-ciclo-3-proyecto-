@@ -15,14 +15,14 @@ public class Empresa {
     @Column(name = "direccion")
     private String direccion;
     @Column(name = "telefono")
-    private double telefono;
+    private String telefono;
     @Column(name = "nit")
-    private double nit;
+    private String nit;
 
     public Empresa(){
 
     }
-    public Empresa(String nombreEmpresa, String direccion , double telefono, double nit){
+    public Empresa(String nombreEmpresa, String direccion , String telefono, String nit){
     
     this.nombreEmpresa = nombreEmpresa;
     this.direccion = direccion;
@@ -48,19 +48,19 @@ public class Empresa {
         this.direccion = direccion;
     }
 
-    public double getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(double telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
-    public double getNit() {
+    public String getNit() {
         return nit;
     }
 
-    public void setNit(double nit) {
+    public void setNit(String nit) {
         this.nit = nit;
     }
     
