@@ -29,7 +29,7 @@ public class EmpresaServicio   {
             Empresa actualizar = repositorioEm.findById(id).orElseThrow();
             //actriburos que se modificaran
                 actualizar.setEmpresa(emp.getEmpresa());
-                actualizar.setNit(emp.getNit());
+               // actualizar.setNit(emp.getNit());
                 actualizar.setTelefono(emp.getTelefono());
                 actualizar.setDireccion(emp.getDireccion());
             return this.repositorioEm.save(actualizar);

@@ -1,8 +1,6 @@
 
 package com.example.Sprint_ciclo3_clases.entities;
 
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
-
 import javax.persistence.*;
 import javax.persistence.Table;
 
@@ -11,14 +9,18 @@ import javax.persistence.Table;
 public class Empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO )
-    private Long Id;
+    private Long registroEmpleado;
     @Column(name = "nombreEmpleado")
     private String nombreEmpleado;
     @Column(name = "correo")
     private String correo;
     @Column(name = "cargo")
     private String cargo;
-
+    //una empresa puede tener varios empleado pero un empleado no puede tener varias empresas
+    // la clave foranea entre estas dos tablas es el nombreEmplesa de la clase Empresa
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "nit")
+    private Empresa empresa;
     /*
     @ManyToOne
     @JoinColumn(name = "nombreEmpresa")
@@ -27,18 +29,17 @@ public class Empleado {
 
     //constructor vacio
 
-    @Transient
-    private Empresa empresa;
+
     public Empleado(){
 
     }
-    public Empleado(String nombreEmpleado, String correo, String cargo, Empresa empresa) {
+  /*  public Empleado(String nombreEmpleado, String correo, String cargo, Empresa empresa) {
 
         this.nombreEmpleado = nombreEmpleado;
         this.correo = correo;
         this.cargo = cargo;
         this.empresa = empresa;
-    }
+    }*/
 
     // ====getter and setter====
 

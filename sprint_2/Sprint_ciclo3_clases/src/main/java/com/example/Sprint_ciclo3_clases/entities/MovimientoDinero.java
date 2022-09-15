@@ -1,6 +1,5 @@
 package com.example.Sprint_ciclo3_clases.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import javax.persistence.Table;
@@ -14,28 +13,29 @@ public class MovimientoDinero {
     @Column(name = "monto")
     private double monto;
     //private double montoPositivoNegativo;
-    @Column(name = "movimiento")
-    private String movimiento;
+    @Column(name = "concepto")
+    private String concepto;
    /* @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "nombreEmpleado", nullable = false)
     @JsonIgnoreProperties(value = "empleado") //se lo agregué para no ver ese ciclo infinito en Json
     private Empresa empresa;
     /*
     */
-    @Transient
-    private Empleado usuario;
+       @ManyToOne(optional = false)
+       @JoinColumn(name = "registroEmpleado")
+    private Empleado empleado;
     //constructor vacio
     public MovimientoDinero(){
 
     }
 
 //contructor
-
-    public MovimientoDinero(double monto, String movimiento, Empleado usuario) {
+/*
+    public MovimientoDinero(double monto, String concepto, Empleado usuario) {
         this.monto = monto;
-        this.movimiento = movimiento;
+        this.concepto = concepto;
         this.usuario= usuario;
-    }
+    }*/
 
   /*  public Empresa getEmpresa(){
         return empresa;}
@@ -51,20 +51,20 @@ public class MovimientoDinero {
         this.monto = monto;
     }
 
-    public String getMovimiento() {
-        return movimiento;
+    public String getConcepto() {
+        return concepto;
     }
 
-    public void setMovimiento(String movimiento) {
-        this.movimiento = movimiento;
+    public void setConcepto(String concepto) {
+        this.concepto = concepto;
     }
 
-    public Empleado getUsuario() {
-        return usuario;
+    public Empleado getEmpleado() {
+        return empleado;
     }
 
-    public void setUsuario(Empleado usuario) {
-        this.usuario = usuario;
+    public void setEmpleado(Empleado empleado) {
+        this.empleado = empleado;
     }
 
     public double montoPositivioNegativo(double monto){
