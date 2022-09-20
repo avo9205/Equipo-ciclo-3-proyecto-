@@ -21,7 +21,7 @@ public class MovimientoDinero {
     private Empresa empresa;
     /*
     */
-       @ManyToOne(optional = false)
+       @ManyToOne(cascade = CascadeType.ALL)
        @JoinColumn(name = "registroEmpleado")
     private Empleado empleado;
     //constructor vacio

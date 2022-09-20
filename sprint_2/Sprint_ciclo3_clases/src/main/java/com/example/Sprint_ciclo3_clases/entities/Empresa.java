@@ -35,11 +35,11 @@ public class Empresa {
     
     //====getter and setter====
 
-    public String getEmpresa() {
+    public String getNombreEmpresa() {
         return nombreEmpresa;
     }
 
-    public void setEmpresa(String nombreEmpresa) {
+    public void setNombreEmpresa(String nombreEmpresa) {
         this.nombreEmpresa = nombreEmpresa;
     }
 

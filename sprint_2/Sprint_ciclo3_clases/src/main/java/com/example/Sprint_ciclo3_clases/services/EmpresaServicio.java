@@ -28,7 +28,7 @@ public class EmpresaServicio   {
         public Empresa actualizarEmp(Long id, Empresa emp){
             Empresa actualizar = repositorioEm.findById(id).orElseThrow();
             //actriburos que se modificaran
-                actualizar.setEmpresa(emp.getEmpresa());
+                actualizar.setNombreEmpresa(emp.getNombreEmpresa());
                // actualizar.setNit(emp.getNit());
                 actualizar.setTelefono(emp.getTelefono());
                 actualizar.setDireccion(emp.getDireccion());
