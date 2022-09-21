@@ -11,16 +11,20 @@ public class EmpleadoServicio {
     List<Empleado> litaEmpleado;
     //atributo
     private RepositorioEmpleado respositorioUser;
+
     //contructor
     public EmpleadoServicio(RepositorioEmpleado respositorioUser) {
         this.respositorioUser = respositorioUser;    }
+
     //metodo de lectura de resgistros
     public List<Empleado> getEmpleadoServicio(){
         return this.respositorioUser.findAll();    }
+
     //metodo de busqueda de un empleado
     public Empleado getEmpleado(Long id){
         return  this.respositorioUser.findById(id).orElseThrow();
     }
+
     //metodo de actualizacion
     public  Empleado actualizarEmpleados(Long id, Empleado user){
 
@@ -29,13 +33,15 @@ public class EmpleadoServicio {
         actualizar.setNombreEmpleado(user.getNombreEmpleado());
         actualizar.setCorreo(user.getCorreo());
         actualizar.setCargo(user.getCargo());
-        return this.respositorioUser.save(actualizar);
-    }
+        return this.respositorioUser.save(actualizar);    }
+
     //creacion de empleados
     public Empleado CrearEmpleado(Empleado nuevoEmpleado){
         return this.respositorioUser.save(nuevoEmpleado);    }
-    public  Empleado eliminarEmpleado(Long id, Empleado delEmplado){
+
+    //Eliminar empleado
+    public  Empleado eliminarEmpleado(Long id){
         Empleado eliminar = respositorioUser.findById(id).orElseThrow();
-        this.respositorioUser.deleteById(id);
-       return eliminar;    }
+       this.respositorioUser.deleteById(id);
+       return eliminar;}
 }

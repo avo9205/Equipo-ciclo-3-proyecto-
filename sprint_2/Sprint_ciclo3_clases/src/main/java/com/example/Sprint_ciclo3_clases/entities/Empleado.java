@@ -75,4 +75,7 @@ public class Empleado {
         this.empresa = empresa;
     }
 
+    public Long getRegistroEmpleado(){
+        return registroEmpleado;
+    }
 }

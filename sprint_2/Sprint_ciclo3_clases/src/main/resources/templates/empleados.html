@@ -24,7 +24,16 @@
                     <p th:text="${empleados.correo}" class="card-text"></p>
                     <p th:text="${empleados.cargo}" class="card-text"></p>
                     <p th:text="${empleados.empresa.nombreEmpresa}" class="card-text"></p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+
+                    <div class="d-flex gap-1 justify-content-center">
+                        <form th:action="@{/user/{id}(id=${empleados.registroEmpleado})}" th:method="get" >
+                        <button type="submit" class="btn btn-primary"> Detalle</button>
+                        </form>
+                        <form th:action="@{/user/{id}(id=${empleados.registroEmpleado})}" th:method="delete" >
+                            <button type="submit" class="btn btn-danger"> Eliminar</button>
+                        </form>
+
+                    </div>
                 </div>
             </div>
 

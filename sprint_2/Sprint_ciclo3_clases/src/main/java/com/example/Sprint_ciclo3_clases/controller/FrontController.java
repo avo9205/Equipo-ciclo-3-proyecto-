@@ -5,6 +5,7 @@ import com.example.Sprint_ciclo3_clases.services.EmpleadoServicio;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -31,4 +32,13 @@ public class FrontController {
         model.addAttribute("empleado", new Empleado());
         return "nuevo-empleado";
     }
+
+    @GetMapping("/user/{id}")
+    public String actualizarEmpleado(@PathVariable Long id, Model model){
+        Empleado empleadoActual = this.servicioUser.getEmpleado(id);
+        model.addAttribute("empleadoActual", empleadoActual);
+        return "actualizar-empleado";
+    }
+
+
 }
