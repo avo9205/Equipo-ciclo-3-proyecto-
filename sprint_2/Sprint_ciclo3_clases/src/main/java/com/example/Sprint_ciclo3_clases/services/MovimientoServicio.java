@@ -31,7 +31,7 @@ public class MovimientoServicio {
 
 
     //-----------metodo  que permitira crear una empresa POST-------------
-    public MovimientoDinero crearMovimiento(MovimientoDinero nuevoMov){
+    public MovimientoDinero crearMovi(MovimientoDinero nuevoMov){
         return this.repositorioMov.save(nuevoMov);    }
 
     //metodo de actualizar empresa

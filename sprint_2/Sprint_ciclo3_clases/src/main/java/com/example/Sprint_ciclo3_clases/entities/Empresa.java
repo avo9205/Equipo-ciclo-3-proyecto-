@@ -7,11 +7,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Empresa")
 public class Empresa {
-   /* @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Id;*/
 
-    //se cambia la primary key
+    //##### la clave primaria de esta tabla es el NIT ####
     @Id
     private Long nit;
     @Column(name = "nombreEmpresa")
@@ -25,13 +22,13 @@ public class Empresa {
     public Empresa(){
 
     }
-   /* public Empresa(String nombreEmpresa, String direccion , String telefono, String nit){
+   public Empresa(String nombreEmpresa, String direccion , String telefono, Long nit){
     
     this.nombreEmpresa = nombreEmpresa;
     this.direccion = direccion;
     this.telefono = telefono;
     this.nit = nit;
-    }*/
+    }
     
     //====getter and setter====
 

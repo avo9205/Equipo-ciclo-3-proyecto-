@@ -15,33 +15,22 @@ public class MovimientoDinero {
     //private double montoPositivoNegativo;
     @Column(name = "concepto")
     private String concepto;
-   /* @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "nombreEmpleado", nullable = false)
-    @JsonIgnoreProperties(value = "empleado") //se lo agregué para no ver ese ciclo infinito en Json
-    private Empresa empresa;
-    /*
-    */
-       @ManyToOne(optional = false)
-       @JoinColumn(name = "registroEmpleado")
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "registroEmpleado")
     private Empleado empleado;
+
     //constructor vacio
     public MovimientoDinero(){
 
     }
 
 //contructor
-/*
-    public MovimientoDinero(double monto, String concepto, Empleado usuario) {
+
+    public MovimientoDinero(double monto, String concepto) {
         this.monto = monto;
         this.concepto = concepto;
-        this.usuario= usuario;
-    }*/
-
-  /*  public Empresa getEmpresa(){
-        return empresa;}
-    public  void  setEmpresa(Empresa empresa){
-        this.empresa= empresa;
-    } */
+    }
 
     public double getMonto() {
         return monto;

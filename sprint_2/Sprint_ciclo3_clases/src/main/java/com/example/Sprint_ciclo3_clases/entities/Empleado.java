@@ -1,4 +1,3 @@
-
 package com.example.Sprint_ciclo3_clases.entities;
 
 import javax.persistence.*;
@@ -16,16 +15,11 @@ public class Empleado {
     private String correo;
     @Column(name = "cargo")
     private String cargo;
-    //una empresa puede tener varios empleado pero un empleado no puede tener varias empresas
-    // la clave foranea entre estas dos tablas es el nombreEmplesa de la clase Empresa
+
     @ManyToOne(optional = false)
     @JoinColumn(name = "nit")
     private Empresa empresa;
-    /*
-    @ManyToOne
-    @JoinColumn(name = "nombreEmpresa")
-    private Empresa empresa;
-    */
+
 
     //constructor vacio
 
@@ -34,7 +28,6 @@ public class Empleado {
 
     }
   /*  public Empleado(String nombreEmpleado, String correo, String cargo, Empresa empresa) {
-
         this.nombreEmpleado = nombreEmpleado;
         this.correo = correo;
         this.cargo = cargo;

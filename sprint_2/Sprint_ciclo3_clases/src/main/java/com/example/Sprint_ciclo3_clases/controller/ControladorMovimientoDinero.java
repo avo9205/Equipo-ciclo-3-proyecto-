@@ -25,7 +25,7 @@ public class ControladorMovimientoDinero {
         return this.servicioMov.getListaMovimiento();          }
     @PostMapping("/movements")
     public MovimientoDinero crearMovimiento(@RequestBody MovimientoDinero mov){
-        return this.servicioMov.crearMovimiento(mov);        }
+        return this.servicioMov.crearMovi(mov);        }
     //consulta de una empresa
     @GetMapping("/movements/{id}")
     public MovimientoDinero consultaMovimineto(@PathVariable Long id){
