@@ -11,6 +11,13 @@
 <body>
 
 <main>
+    <div class="display-5 row align-items-center ">
+        <div sec:authorize="isAuthenticated()" >
+            <h6 class="my-2 mx-2" th:text="'Bienvenido '+ ${usuario.getEmail()}" align="right"> </h6>
+        </div>
+    </div>
+
+
     <div class="text-center px-4 py-4 gap-3">
         <h2 class="display-5 fw-bold px-4 py-4 mg-4"> Salad </h2>
         <p> Tienda de ropa de Alberto </p>

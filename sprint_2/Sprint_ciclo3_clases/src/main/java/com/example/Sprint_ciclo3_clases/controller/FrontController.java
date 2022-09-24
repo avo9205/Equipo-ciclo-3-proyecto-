@@ -1,6 +1,7 @@
 package com.example.Sprint_ciclo3_clases.controller;
 
 import com.example.Sprint_ciclo3_clases.entities.Empleado;
+import com.example.Sprint_ciclo3_clases.entities.Usuarios;
 import com.example.Sprint_ciclo3_clases.services.EmpleadoServicio;
 import com.example.Sprint_ciclo3_clases.services.UsuarioServicio;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -24,7 +25,9 @@ public class FrontController {
     @GetMapping("/")
     public String index(Model model, @AuthenticationPrincipal OidcUser principal){
         if(principal != null){
-            System.out.println(principal.getClaims());
+           // System.out.println(principal.getClaims());
+            Usuarios usuario =this.servicioUsuario.getCreateUsuario(principal.getClaims());
+            model.addAttribute("usuario",usuario);
         }
         return "index";
     }
