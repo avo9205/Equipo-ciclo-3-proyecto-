@@ -11,7 +11,7 @@ public class Empresa {
     //##### la clave primaria de esta tabla es el NIT ####
     @Id
     private Long nit;
-    @Column(name = "nombreEmpresa")
+    @Column(name = "nombre_empresa")
     private String nombreEmpresa;
     @Column(name = "direccion")
     private String direccion;
@@ -21,14 +21,14 @@ public class Empresa {
 
     public Empresa(){
 
-    }
+    }/*
    public Empresa(String nombreEmpresa, String direccion , String telefono, Long nit){
     
     this.nombreEmpresa = nombreEmpresa;
     this.direccion = direccion;
     this.telefono = telefono;
     this.nit = nit;
-    }
+    }*/
     
     //====getter and setter====
 

@@ -1,8 +1,10 @@
 package com.example.Sprint_ciclo3_clases.controller;
 
 import com.example.Sprint_ciclo3_clases.entities.Empleado;
+import com.example.Sprint_ciclo3_clases.entities.Empresa;
 import com.example.Sprint_ciclo3_clases.entities.Usuarios;
 import com.example.Sprint_ciclo3_clases.services.EmpleadoServicio;
+import com.example.Sprint_ciclo3_clases.services.EmpresaServicio;
 import com.example.Sprint_ciclo3_clases.services.UsuarioServicio;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
@@ -18,10 +20,13 @@ public class FrontController {
 
     EmpleadoServicio servicioUser;
     UsuarioServicio servicioUsuario;
-    public FrontController(EmpleadoServicio servicioUser, UsuarioServicio servicioUsuario) {
+    EmpresaServicio servicioEmpresa;
+    public FrontController(EmpleadoServicio servicioUser, UsuarioServicio servicioUsuario,EmpresaServicio servicioEmpresa) {
         this.servicioUser = servicioUser;
-        this.servicioUsuario = servicioUsuario; }
+        this.servicioUsuario = servicioUsuario;
+        this.servicioEmpresa =servicioEmpresa;}
 
+    //este es el mapeo de la pantalla principal, solo muestra el login e información del grupo de trabajo
     @GetMapping("/")
     public String index(Model model, @AuthenticationPrincipal OidcUser principal){
         if(principal != null){
@@ -31,6 +36,8 @@ public class FrontController {
         }
         return "index";
     }
+
+    //mapeo de la entidad empleado
     @GetMapping("/user")
     //se crea un modelo
     public String empleados(Model modeloEmp){
@@ -51,5 +58,33 @@ public class FrontController {
         return "actualizar-empleado";
     }
 
-    //Modelado de la autentificacion
+   //------------%%%%%% Empresa %%%%%% ----------------------
+    @GetMapping("/interface")
+    public String interfaces(){
+        return "interface";
+    }
+
+    //-------------mapeo de las Empresas -------------------
+    @GetMapping("/enterprises")
+    public String empresas(Model model){
+        List<Empresa> empresas = this.servicioEmpresa.getListaEmpresa();
+        model.addAttribute("empresas", empresas);
+        return "enterprises";
+    }
+    //---------- Crear una empresa -------------------------
+    @GetMapping("/enterprises/new-enterprises")
+    public String crearEmpresa(Model model) {
+        model.addAttribute("empresa", new Empresa());
+        return "new-enterprises";
+
+    }
+    //------------ Actualizar empresa y get empresa --------
+    @GetMapping("/enterprises/{id}")
+    public String actualizarEmpresa(@PathVariable Long id, Model model) {
+        Empresa empresaActual = this.servicioEmpresa.getEmpresa(id);
+        model.addAttribute("empresaActual", empresaActual);
+        return "update-enterprises";
+    }
+
+
 }

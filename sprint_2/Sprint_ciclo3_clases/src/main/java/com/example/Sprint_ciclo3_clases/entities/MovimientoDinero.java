@@ -16,8 +16,11 @@ public class MovimientoDinero {
     @Column(name = "concepto")
     private String concepto;
 
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "registroEmpleado")
+    @Column(name = "registro_empleado")
+    private Long registroEmpleado;
+
+    @ManyToOne
+    @JoinColumn(name = "registro_empleado",insertable = false,updatable = false)
     private Empleado empleado;
 
     //constructor vacio

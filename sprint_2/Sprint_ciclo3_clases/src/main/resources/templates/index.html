@@ -23,13 +23,12 @@
         <p> Tienda de ropa de Alberto </p>
         <img src="img/camiseta-casual.png" class="d-block mx-auto my-auto py-2" height="300" alt="logo">
 
-
         <div sec:authorize="!isAuthenticated()" class="text-center gap-3 my-2">
             <a th:href="@{/oauth2/authorization/auth0}" class="btn btn-primary py-2 "> Iniciar Sesión </a>
         </div>
 
         <div sec:authorize="isAuthenticated()" class="text-center gap-3 my-2 " >
-            <a href="/user" class="btn btn-primary py-2 "> Ir al proyecto </a>
+            <a href="/interface" class="btn btn-primary py-2 "> Ir al proyecto </a>
         </div>
 
         <div class="text-center gap-3">
