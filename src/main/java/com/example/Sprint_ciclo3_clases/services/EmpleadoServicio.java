@@ -22,13 +22,13 @@ public class EmpleadoServicio {
 
     //metodo de busqueda de un empleado
     public Empleado getEmpleado(Long id){
-        return  this.respositorioUser.findById(id).orElseThrow();
+        return  this.respositorioUser.findById(id).orElseThrow(IllegalStateException::new);
     }
 
     //metodo de actualizacion
     public  Empleado actualizarEmpleados(Long id, Empleado user){
 
-        Empleado actualizar = respositorioUser.findById(id).orElseThrow();
+        Empleado actualizar = respositorioUser.findById(id).orElseThrow(IllegalStateException::new);
         actualizar.setEmpresa(user.getEmpresa());
         actualizar.setNombreEmpleado(user.getNombreEmpleado());
         actualizar.setCorreo(user.getCorreo());
@@ -41,7 +41,7 @@ public class EmpleadoServicio {
 
     //Eliminar empleado
     public  Empleado eliminarEmpleado(Long id){
-        Empleado eliminar = respositorioUser.findById(id).orElseThrow();
+        Empleado eliminar = respositorioUser.findById(id).orElseThrow(IllegalStateException::new);
        this.respositorioUser.deleteById(id);
        return eliminar;}
 }

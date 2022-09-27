@@ -27,7 +27,7 @@ public class MovimientoServicio {
 
 
     public MovimientoDinero getMovimiento(Long id){
-        return this.repositorioMov.findById(id).orElseThrow();        }
+        return this.repositorioMov.findById(id).orElseThrow(IllegalStateException::new);        }
 
 
     //-----------metodo  que permitira crear una empresa POST-------------
@@ -36,7 +36,7 @@ public class MovimientoServicio {
 
     //metodo de actualizar empresa
     public MovimientoDinero actualizarMov(Long id, MovimientoDinero mov){
-        MovimientoDinero actualizar = repositorioMov.findById(id).orElseThrow();
+        MovimientoDinero actualizar = repositorioMov.findById(id).orElseThrow(IllegalStateException::new);
         //actriburos que se modificaran
         actualizar.setConcepto(mov.getConcepto());
         // actualizar.setNit(emp.getNit());
@@ -46,7 +46,7 @@ public class MovimientoServicio {
     }
     public MovimientoDinero elimiarMoviminento(Long id){
         //mostrar lo que borrará
-        MovimientoDinero del = repositorioMov.findById(id).orElseThrow();
+        MovimientoDinero del = repositorioMov.findById(id).orElseThrow(IllegalStateException::new);
         this.repositorioMov.deleteById(id);
         return del;
     }

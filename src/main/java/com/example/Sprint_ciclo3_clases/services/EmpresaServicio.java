@@ -25,7 +25,7 @@ public class EmpresaServicio   {
 
 
         public Empresa getEmpresa(Long id){
-            return this.repositorioEm.findById(id).orElseThrow();        }
+            return this.repositorioEm.findById(id).orElseThrow(IllegalStateException::new);        }
 
 
         //metodo  que permitira crear una empresa
@@ -35,7 +35,7 @@ public class EmpresaServicio   {
 
         //metodo de actualizar empresa
         public Empresa actualizarEmp(Long id, Empresa emp){
-            Empresa actualizar = repositorioEm.findById(id).orElseThrow();
+            Empresa actualizar = repositorioEm.findById(id).orElseThrow(IllegalStateException::new);
             //actriburos que se modificaran
                 actualizar.setNombreEmpresa(emp.getNombreEmpresa());
                //actualizar.setNit(emp.getNit());
@@ -45,7 +45,7 @@ public class EmpresaServicio   {
 
         public Empresa elimiarEmpresas(Long id){
         //mostrar lo que borrará
-            Empresa del = repositorioEm.findById(id).orElseThrow();
+            Empresa del = repositorioEm.findById(id).orElseThrow(IllegalStateException::new);
             this.repositorioEm.deleteById(id);
         return del;
         }

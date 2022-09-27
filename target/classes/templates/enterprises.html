@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <title>Enterprises</title>
+</head>
+<body>
+<main>
+    <div class="px-5 py-5 my-5 text-center">
+
+        <h1 class="display-5 fw-bold mb-4">Empresas</h1>
+
+        <div class="d-flex justify-content-center gap-3">
+            <!-- se crea una tarjeta por cada empleado, se emplea el condicional each para cada empleado de la base de datos -->
+            <table class="table">
+                <thead class="thead-dark">
+                    <th scope="col"> Nit </th>
+                    <th scope="col"> Nombre </th>
+                    <th scope="col"> dirección </th>
+                    <th scope="col"> Telefono </th>
+                    <th scope="col"> </th>
+                    <th scope="col"> </th>
+                </thead>
+                <tbody>
+                <tr th:each="empresas:${empresas}">
+                    <td th:text="${empresas.nit}"></td>
+                    <td th:text="${empresas.nombreEmpresa}"></td>
+                    <td th:text="${empresas.direccion}"></td>
+                    <td th:text="${empresas.telefono}"></td>
+
+                    <td>
+                        <form th:action="@{/enterprises/{id}(id=${empresas.nit})}" th:method="get" >
+                            <button type="submit" class="btn btn-primary"> Actualizar</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form th:action="@{/enterprises/{id}(id=${empresas.nit})}" th:method="delete" >
+                            <button type="submit" class="btn btn-danger"> Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="px-4 py-4 text-center">
+            <a href="/enterprises/new-enterprises"  type="button" class="btn btn-primary py-2 " > Crear Empresa  </a>
+            <a href="/interface"  type="button" class="btn btn-outline-secondary py-2 " > Regresar Menu  </a>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
