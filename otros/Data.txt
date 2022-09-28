@@ -1,0 +1,9 @@
+Clave : TiendaDeRopa
+
+Host : db.lxwvwnnhwggrzetukjsp.supabase.co
+
+Database name :  postgres
+
+Port : 5432
+
+User: postgres

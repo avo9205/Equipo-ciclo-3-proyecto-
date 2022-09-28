@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <title>Empleados</title>
+</head>
+<body>
+<main>
+    <div class="px-5 py-5 my-5 text-center">
+
+        <h1 class="display-5 fw-bold mb-4">Empleados</h1>
+
+        <div class="d-flex justify-content-center gap-3">
+<!-- se crea una tarjeta por cada empleado, se emplea el condicional each para cada empleado de la base de datos -->
+            <div th:each="empleados:${empleados}" class="card" style="width: 18rem;">
+                <img src="img/eevee.png" class="d-block mx-auto my-auto py-2" height="150" alt="empleado">
+                <div class="card-body">
+                    <h5 th:text="${empleados.nombreEmpleado}" class="card-title">Card title</h5>
+                    <p th:text="${empleados.correo}" class="card-text"></p>
+                    <p th:text="${empleados.cargo}" class="card-text"></p>
+                    <p th:text="${empleados.empresa.nombreEmpresa}" class="card-text"></p>
+
+                    <div class="d-flex gap-1 justify-content-center">
+                        <form th:action="@{/user/{id}(id=${empleados.registroEmpleado})}" th:method="get" >
+                        <button type="submit" class="btn btn-primary"> Detalle</button>
+                        </form>
+                        <form th:action="@{/user/{id}(id=${empleados.registroEmpleado})}" th:method="delete" >
+                            <button type="submit" class="btn btn-danger"> Eliminar</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="px-4 py-4 text-center">
+            <a href="/user/nuevo-empleado"  type="button" class="btn btn-primary py-2 " > Crear Empleado  </a>
+            <a href="/interface"  type="button" class="btn btn-outline-secondary py-2 " > Regresar Menu  </a>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

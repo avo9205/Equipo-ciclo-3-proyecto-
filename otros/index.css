@@ -1,0 +1,22 @@
+*{
+
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+	}
+h1{
+		background-color: blueviolet;
+		color: black; 
+	}
+
+.boton{
+		background-color: limegreen;
+		color: black;
+
+	} 
+
+.imagen .imagen_ryu{
+
+	height: 540px;
+	width: 910px;
+}	

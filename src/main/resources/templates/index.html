@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>index tienda de ropa</title>
+</head>
+<body>
+
+<main>
+    <div class="display-5 row align-items-center ">
+        <div sec:authorize="isAuthenticated()" >
+            <h6 class="my-2 mx-2" th:text="'Bienvenido '+ ${usuario.getEmail()}" align="right"> </h6>
+        </div>
+    </div>
+
+
+    <div class="text-center px-4 py-4 gap-3">
+        <h2 class="display-5 fw-bold px-4 py-4 mg-4"> Salad </h2>
+        <p> Tienda de ropa de Alberto </p>
+        <img src="img/camiseta-casual.png" class="d-block mx-auto my-auto py-2" height="300" alt="logo">
+
+        <div sec:authorize="!isAuthenticated()" class="text-center gap-3 my-2">
+            <a th:href="@{/oauth2/authorization/auth0}" class="btn btn-primary py-2 "> Iniciar Sesión </a>
+        </div>
+
+        <div sec:authorize="isAuthenticated()" class="text-center gap-3 my-2 " >
+            <a href="/interface" class="btn btn-primary py-2 "> Ir al proyecto </a>
+        </div>
+
+        <div class="text-center gap-3">
+            <a href="/user" class="btn btn-outline-secondary py-2 "> Información </a>
+        </div>
+
+    </div>
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

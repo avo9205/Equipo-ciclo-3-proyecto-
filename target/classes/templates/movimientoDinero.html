@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <title>Movimientos Empresa</title>
+</head>
+<body>
+<main>
+    <div class="px-5 py-5 my-5 text-center">
+
+        <h1 class="display-5 fw-bold mb-4">Movimientos</h1>
+
+        <div class="d-flex justify-content-center gap-3">
+            <table class="table">
+                <thead class="thead-dark">
+               <th scope="col"> Id movimiento </th>
+                <th scope="col"> Monto </th>
+                <th scope="col"> Concepto </th>
+                <th scope="col"> Empresa </th>
+                <th scope="col"> Id Empleado </th>
+               <!--<th scope="col"> Nombre </th>-->
+                <th scope="col"> </th>
+                <th scope="col"> </th>
+                </thead>
+                <tbody>
+                <tr th:each="movimientos:${movimientos}">
+                    <td th:text="${movimientos.Id}"></td>
+                    <td th:text="${movimientos.monto}"></td>
+                    <td th:text="${movimientos.concepto}"></td>
+                    <td th:text="${movimientos.empleado.empresa.nombreEmpresa}"></td>
+                    <td th:text="${movimientos.empleado.registroEmpleado}"></td>
+                   <!-- <td th:text="${movimientos.empleado.nombreEmpleado}"></td> -->
+
+                    <td>
+                        <form th:action="@{/movements/{id}(id=${movimientos.id})}" th:method="get" >
+                            <button type="submit" class="btn btn-primary"> Actualizar Mov </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form th:action="@{/movements/{id}(id=${movimientos.id})}" th:method="delete" >
+                            <button type="submit" class="btn btn-danger"> Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Montos</h3>
+
+        <div class="d-flex  px-4 gap-3">
+            <table class="table" >
+                <thead class="thead-dark">
+                    <th scope="col"> Montos Positivos </th>
+                    <th scope="col"> Montos Negativos </th>
+                    <th scope="col"> Monto total </th>
+                </thead>
+
+                <tbody>
+                    <td th:text="${montosPositivos}"></td>
+                    <td th:text="${montosNegativos}"></td>
+                    <td th:text="${montoTotal}"></td>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="px-4 py-4 text-center">
+            <a href="/enterprises/nuevo-movimiento"  type="button" class="btn btn-primary py-2 " > Crear Movimiento  </a>
+            <a href="/interface"  type="button" class="btn btn-outline-secondary py-2 " > Regresar Menu  </a>
+        </div>
+
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
