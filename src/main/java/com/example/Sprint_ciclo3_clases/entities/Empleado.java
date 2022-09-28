@@ -71,4 +71,8 @@ public class Empleado {
     public Long getRegistroEmpleado(){
         return registroEmpleado;
     }
+
+    public void setRegistroEmpleado(Long registroEmpleado) {
+        this.registroEmpleado = registroEmpleado;
+    }
 }

@@ -10,18 +10,13 @@ import java.util.List;
 
 @Service
 public class MovimientoServicio {
-
     private RepositorioMovimiento repositorioMov;
-
 
     public MovimientoServicio(RepositorioMovimiento repositorioMov){
         this.repositorioMov = repositorioMov;
     }
-    //metodo get /enterprises/[id]/movements
-   // public MovimientoDinero getMovimiento(Long id){
-     //   return this.repositorioMov.findById(id).orElseThrow();    }
 
-    //-------------metodo qque se usara para visualizar el Get--------------
+    //-------------metodo que se usara para visualizar el Get--------------
     public List<MovimientoDinero> getListaMovimiento(){
         return this.repositorioMov.findAll();    }
 
@@ -37,9 +32,8 @@ public class MovimientoServicio {
     //metodo de actualizar empresa
     public MovimientoDinero actualizarMov(Long id, MovimientoDinero mov){
         MovimientoDinero actualizar = repositorioMov.findById(id).orElseThrow(IllegalStateException::new);
-        //actriburos que se modificaran
+        //atributos que se modificaran
         actualizar.setConcepto(mov.getConcepto());
-        // actualizar.setNit(emp.getNit());
         actualizar.setMonto(mov.getMonto());
         actualizar.setEmpleado(mov.getEmpleado());
         return this.repositorioMov.save(actualizar);

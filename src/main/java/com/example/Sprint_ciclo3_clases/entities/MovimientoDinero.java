@@ -8,7 +8,6 @@ import javax.persistence.Table;
 @Table(name = "MovimientoDinero")
 public class MovimientoDinero {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private  Long Id;
     @Column(name = "monto")
     private double monto;
@@ -16,11 +15,8 @@ public class MovimientoDinero {
     @Column(name = "concepto")
     private String concepto;
 
-    @Column(name = "registro_empleado")
-    private Long registroEmpleado;
-
-    @ManyToOne
-    @JoinColumn(name = "registro_empleado",insertable = false,updatable = false)
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "registroEmpleado",insertable = false,updatable = false)
     private Empleado empleado;
 
     //constructor vacio
@@ -57,6 +53,14 @@ public class MovimientoDinero {
 
     public void setEmpleado(Empleado empleado) {
         this.empleado = empleado;
+    }
+
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
     }
 
     public double montoPositivioNegativo(double monto){

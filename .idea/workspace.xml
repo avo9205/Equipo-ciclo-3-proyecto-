@@ -5,17 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82bea295-68fc-4267-829b-acbbf09f33f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/services/EmpleadoServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/services/EmpleadoServicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/services/EmpresaServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/services/EmpresaServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/controller/ControladorMovimientoDinero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/controller/ControladorMovimientoDinero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/controller/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/controller/FrontController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/entities/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/entities/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/entities/MovimientoDinero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/entities/MovimientoDinero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/services/MovimientoServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/services/MovimientoServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/interface.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/interface.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Sprint_ciclo3_clases/controller/ControladorMovimientoDinero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Sprint_ciclo3_clases/controller/ControladorMovimientoDinero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Sprint_ciclo3_clases/controller/FrontController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Sprint_ciclo3_clases/controller/FrontController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Sprint_ciclo3_clases/entities/MovimientoDinero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Sprint_ciclo3_clases/entities/MovimientoDinero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Sprint_ciclo3_clases/services/MovimientoServicio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Sprint_ciclo3_clases/services/MovimientoServicio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/interface.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/interface.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -23,11 +36,15 @@
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
     <option name="myId2Visible">
       <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
@@ -51,6 +68,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/samav/OneDrive/Documents/Equipo-ciclo-3-proyecto-&quot;,
