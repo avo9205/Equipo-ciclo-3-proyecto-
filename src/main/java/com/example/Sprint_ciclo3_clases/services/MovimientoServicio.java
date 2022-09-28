@@ -45,4 +45,36 @@ public class MovimientoServicio {
         return del;
     }
 
+    public double getMontosPositivos(){
+        List<MovimientoDinero> positivos = this.repositorioMov.findAll();
+        double  montosPositivos = 0;
+        for (int i =0; i< positivos.size();i++){
+            if (positivos.get(i).getMonto()>0){
+                montosPositivos += positivos.get(i).getMonto();
+            }
+        }
+        return montosPositivos;
+    }
+    public double getMontosNegativos(){
+        List<MovimientoDinero> negativos = this.repositorioMov.findAll();
+        double  montosNegativos = 0;
+        for (int i =0; i< negativos.size();i++){
+            if (negativos.get(i).getMonto()<0){
+                montosNegativos += negativos.get(i).getMonto();
+            }
+        }
+        return montosNegativos;
+    }
+    public double getMontoTotal(){
+        List<MovimientoDinero> total = this.repositorioMov.findAll();
+        double  totales = 0;
+        for (int i =0; i< total.size();i++){
+            if (total.get(i).getMonto() >0 || total.get(i).getMonto() <0 ){
+                totales += total.get(i).getMonto();
+            }
+        }
+        return totales;
+    }
+
+
 }

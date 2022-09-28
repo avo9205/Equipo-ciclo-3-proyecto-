@@ -102,7 +102,21 @@ public class FrontController {
     public String movimientoDinero(Model model) {
         List<MovimientoDinero> movimientos = this.servicioMovimiento.getListaMovimiento();
         model.addAttribute("movimientos", movimientos);
+
+        long montosPositivos ;
+        montosPositivos = (long) this.servicioMovimiento.getMontosPositivos();
+        model.addAttribute("montosPositivos", montosPositivos);
+
+        long montosNegativos ;
+        montosNegativos = (long) this.servicioMovimiento.getMontosNegativos();
+        model.addAttribute("montosNegativos", montosNegativos);
+
+        long montoTotal ;
+        montoTotal = (long) this.servicioMovimiento.getMontoTotal();
+        model.addAttribute("montoTotal", montoTotal);
+
         return "movimientoDinero";}
+
 
     //------------ Actualizar empresa y get empresa --------
     @GetMapping("/movements/{id}")

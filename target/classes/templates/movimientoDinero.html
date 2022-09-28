@@ -49,7 +49,24 @@
                 </tr>
                 </tbody>
             </table>
+        </div>
 
+        <h3>Montos</h3>
+
+        <div class="d-flex  px-4 gap-3">
+            <table class="table" >
+                <thead class="thead-dark">
+                    <th scope="col"> Montos Positivos </th>
+                    <th scope="col"> Montos Negativos </th>
+                    <th scope="col"> Monto total </th>
+                </thead>
+
+                <tbody>
+                    <td th:text="${montosPositivos}"></td>
+                    <td th:text="${montosNegativos}"></td>
+                    <td th:text="${montoTotal}"></td>
+                </tbody>
+            </table>
         </div>
 
         <div class="px-4 py-4 text-center">
