@@ -35,7 +35,7 @@ public class MovimientoServicio {
         //atributos que se modificaran
         actualizar.setConcepto(mov.getConcepto());
         actualizar.setMonto(mov.getMonto());
-        actualizar.setEmpleado(mov.getEmpleado());
+        //actualizar.setEmpleado(mov.getEmpleado());
         return this.repositorioMov.save(actualizar);
     }
     public MovimientoDinero elimiarMoviminento(Long id){

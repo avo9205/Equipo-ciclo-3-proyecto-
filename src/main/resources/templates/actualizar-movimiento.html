@@ -19,7 +19,8 @@
                 <input th:field="*{movimientoAcual.Id}" class="form-control" type="text" placeholder="Id movimiento" disabled="true" />
                 <input th:field="*{movimientoAcual.monto}" class="form-control" type="text" placeholder="Monto"/>
                 <input th:field="*{movimientoAcual.concepto}" class="form-control" type="text" placeholder="Concepto"/>
-                <input th:field="*{movimientoAcual.empleado.registroEmpleado}" class="form-control" type="text" placeholder="Id Empleado" />
+                <input th:field="*{movimientoAcual.empleado.registroEmpleado}" class="form-control" type="text" placeholder="Id Empleado" disabled="true"/>
+                <input th:field="*{movimientoAcual.empleado.empresa.nit}" class="form-control" type="text" placeholder="Id Empleado" disabled="true"/>
                 <button type="submit" class="btn btn-primary py-2">Actualizar Movimiento</button>
 
             </form>

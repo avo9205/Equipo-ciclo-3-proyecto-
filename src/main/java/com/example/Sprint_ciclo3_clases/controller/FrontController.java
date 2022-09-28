@@ -114,6 +114,6 @@ public class FrontController {
     //---------- Crear un Movimiento -------------------------
     @GetMapping("/enterprises/nuevo-movimiento")
     public String crearMovimiento(Model model) {
-        model.addAttribute("movimiento", new MovimientoDinero());
+        model.addAttribute("movimientoDinero", new MovimientoDinero());
         return "nuevo-movimiento";}
 }

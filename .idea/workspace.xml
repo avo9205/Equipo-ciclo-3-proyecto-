@@ -6,17 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="82bea295-68fc-4267-829b-acbbf09f33f8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/controller/ControladorMovimientoDinero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/controller/ControladorMovimientoDinero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/controller/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/controller/FrontController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/entities/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/entities/Empleado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/entities/MovimientoDinero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/entities/MovimientoDinero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/services/MovimientoServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Sprint_ciclo3_clases/services/MovimientoServicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/interface.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/interface.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Sprint_ciclo3_clases/controller/ControladorMovimientoDinero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Sprint_ciclo3_clases/controller/ControladorMovimientoDinero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/actualizar-movimiento.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/actualizar-movimiento.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/movimientoDinero.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/movimientoDinero.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/nuevo-movimiento.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/nuevo-movimiento.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/Sprint_ciclo3_clases/controller/FrontController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Sprint_ciclo3_clases/controller/FrontController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/Sprint_ciclo3_clases/entities/MovimientoDinero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Sprint_ciclo3_clases/entities/MovimientoDinero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Sprint_ciclo3_clases/services/MovimientoServicio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Sprint_ciclo3_clases/services/MovimientoServicio.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/interface.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/interface.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/actualizar-movimiento.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/actualizar-movimiento.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/movimientoDinero.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/movimientoDinero.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/nuevo-movimiento.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/nuevo-movimiento.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

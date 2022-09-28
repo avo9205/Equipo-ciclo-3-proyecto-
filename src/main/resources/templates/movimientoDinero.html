@@ -21,8 +21,9 @@
                <th scope="col"> Id movimiento </th>
                 <th scope="col"> Monto </th>
                 <th scope="col"> Concepto </th>
-                <th scope="col"> Id Empleado </th>
                 <th scope="col"> Empresa </th>
+                <th scope="col"> Id Empleado </th>
+               <!--<th scope="col"> Nombre </th>-->
                 <th scope="col"> </th>
                 <th scope="col"> </th>
                 </thead>
@@ -31,8 +32,10 @@
                     <td th:text="${movimientos.Id}"></td>
                     <td th:text="${movimientos.monto}"></td>
                     <td th:text="${movimientos.concepto}"></td>
-                    <td th:text="${movimientos.empleado.registroEmpleado}"></td>
                     <td th:text="${movimientos.empleado.empresa.nombreEmpresa}"></td>
+                    <td th:text="${movimientos.empleado.registroEmpleado}"></td>
+                   <!-- <td th:text="${movimientos.empleado.nombreEmpleado}"></td> -->
+
                     <td>
                         <form th:action="@{/movements/{id}(id=${movimientos.id})}" th:method="get" >
                             <button type="submit" class="btn btn-primary"> Actualizar Mov </button>

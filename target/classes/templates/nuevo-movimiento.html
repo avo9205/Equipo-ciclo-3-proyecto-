@@ -16,11 +16,15 @@
             Nuevo movimiento
         </h1>
         <div class="col-lg-5 mx-auto">
-            <form th:action="@{/movements}" th:method="post" th:object="${movimiento}" class=" d-flex flex-column gap-3 align-items-center">
+            <form th:action="@{/movements}" th:method="post" th:object="${movimientoDinero}" class=" d-flex flex-column gap-3 align-items-center">
                 <input th:field="*{Id}" class="form-control" type="number" placeholder="Id movimiento"/>
-                <input th:field="*{monto}" class="form-control" type="text" placeholder="Monto"/>
-                <input th:field="*{concepto}" class="form-control" type="text" placeholder="Concepto"/>
-                <input th:field="*{registroEmpleado}" class="form-control" type="text" placeholder="Id empleado"/>
+                <input th:field="*{concepto}" class="form-control" type="text" placeholder=" Concepto"/>
+                <input th:field="*{monto}" class="form-control" type="number" placeholder=" Monto "/>
+                <input th:field="*{empleado.empresa.nit}" class="form-control" type="text" placeholder="Nit Empresa"/>
+                <input th:field="*{empleado.registroEmpleado}" class="form-control" type="text" placeholder="Id Empleado"/>
+
+                <!--<input th:field="*{empleado.cargo}" class="form-control" type="text" placeholder="Id empleado"/>
+                <input th:field="*{empleado.empresa.nit}" class="form-control" type="text" placeholder="Id empleado"/>-->
                 <button type="submit" class="btn btn-primary py-2 px-5">Crear Movimiento</button>
             </form>
         </div>

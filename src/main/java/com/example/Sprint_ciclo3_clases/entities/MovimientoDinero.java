@@ -1,6 +1,11 @@
 package com.example.Sprint_ciclo3_clases.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.sun.istack.NotNull;
+import org.springframework.lang.NonNull;
+
 import javax.persistence.*;
 import javax.persistence.Table;
 
@@ -15,8 +20,9 @@ public class MovimientoDinero {
     @Column(name = "concepto")
     private String concepto;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "registroEmpleado",insertable = false,updatable = false)
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "registroEmpleado", nullable = false)
+    @JsonIgnoreProperties(value = "empleado")
     private Empleado empleado;
 
     //constructor vacio
