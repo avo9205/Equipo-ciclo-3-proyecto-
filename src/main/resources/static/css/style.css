@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+
+
+.contenedor{
+	padding: 60px 0px;
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+	flex-wrap: wrap;
+}
+
+.titulo{
+	color: #486A36;
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+/*Header*/
+
+header{
+	width: 100%;
+	height: 600px;
+	background-image: url(../image/oficina.png);
+	/*background: linear-gradient(to right, hsla(340, 95%, 10%, 0.671), #bc4e9c), url(../image/oficina.png);*/
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+}
+
+header .textos-header{
+	display: flex;
+	height: 430px;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.textos-header h1{
+	font-size: 50px;
+	color: ghostwhite;
+}
+
+.textos-header h2{
+	font-size: 20px;
+	color: #D3D3D3;
+
+}
+
+
+/*About-us*/
+
+.contenedor-sobre-nosotros{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	
+
+	
+
+}
+
+.imagen-about-us{
+	width: 45%;
+	height: 40vh;
+	
+
+}
+
+.sobre-nosotros .contenido-textos{
+	width: 48%;
+
+}
+
+.contenido-textos p{
+	padding: 0px 0px 30px 15px;
+	text-align: justify;
+}
+
+
+/*Nosostros*/
+
+.cards{
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap
+	
+	
+}
+
+.cards .card{
+	background: #562C23;
+	display: flex;
+	width: 30%;
+	height: 150px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	transition: 0.5s;
+	overflow: auto;
+	flex-direction:row ;
+}
+.cards .card:hover{
+	background: #91CA3F;
+	width: 35%;
+	height: 160px;
+	font-size: 20px;
+}
+
+
+.cards .card img{
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+	border: 3px solid whitesmoke;
+	border-radius: 50%;
+	display: block;
+}
+
+
+
+.cards .card > .contenido-texto-card{
+	width: 60%;
+	color: whitesmoke;
+}
+
+.cards .card > .contenido-texto-card p{
+	font-size: 12px;
+	font-weight: 300;
+	padding: 5px;
+}
+
+/*Footer*/
+
+footer{
+	
+	background-image: url("../image/piso2.jpg");
+	padding: 60px 0px 30px 0px;
+	margin: auto;
+	overflow: hidden;
+	object-fit: cover;
+	
+}
+
+footer{
+	text-align: center;
+	margin: 10px;
+	padding: 10px;
+	color: whitesmoke;
+}
+
+.contenedor-footer{
+	display: flex;
+	width: 90%;
+	margin: auto;
+	justify-content: space-evenly;
+	padding-bottom: 50px;
+	flex-wrap: wrap;
+}
+
+.content-foo{
+	text-align: center;
+	width: 100px;
+	height: 100px;
+
+}
+
+
+.content-foo h4{
+	color: white;
+	border-bottom: 3px solid blueviolet ;
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+}
+
+.content-foo img{
+	align-items: center;
+	width:100%;
+	height: 100hv; 
+}
+
+
+.content-sponsor{
+
+}
+
+ .repositorio{
+ 	flex-direction: center;
+ 	color: green;
+ }
+
+
+ .repositorio i{
+ 	color: black;
+ 	font-size: 24px;
+ }
+ .repositorio i a{
+ 	text-decoration: none;
+ 	color: white;
+ }
+
+
+.repositorio i a:hover{
+ 	color: black;
+ }
+.repositorio i:hover {
+			color: white;
+
+}
+
+
+
+
+.titulo-final{
+	text-align: center;
+	font-size: 24px;
+	margin: 24px 0 0 0;
+	color: whitesmoke;
+}
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
