@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82bea295-68fc-4267-829b-acbbf09f33f8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/charmander.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/actualizar-empleado.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/actualizar-empleado.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/empleados.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/empleados.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/about-us.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/interface.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/interface.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/actualizar-empleado.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/actualizar-empleado.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/about-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/image/img1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/image/img1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/image/img2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/image/img2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/image/img3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/image/img3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +72,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Subversion&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\samav\OneDrive\Documents\Equipo-ciclo-3-proyecto-\src\main\resources\static\img" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="SprintCiclo3ClasesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Sprint_ciclo3_clases.SprintCiclo3ClasesApplication" />
