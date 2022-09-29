@@ -16,7 +16,6 @@
         <div th:each="empleadoActual : ${empleadoActual}" class="col-lg-5 mx-auto">
 
             <form th:action="@{/user/{id}(id=${empleadoActual.registroEmpleado})}" th:method="put" class=" d-flex flex-column gap-3 align-items-center">
-
                 <input th:field="*{empleadoActual.nombreEmpleado}" class="form-control" type="text" placeholder="Nombre" />
                 <input th:field="*{empleadoActual.cargo}" class="form-control" type="text" placeholder="Cargo"/>
                 <input th:field="*{empleadoActual.correo}" class="form-control" type="text" placeholder="Correo"/>

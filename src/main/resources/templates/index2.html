@@ -2,14 +2,31 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>index tienda de ropa</title>
 </head>
 <body>
+<div class="intro">
+    <img src="logo.png" alt="Sajaa logo">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class="logo">
+        <span class="logo-parts">S</span>
+        <span class="logo-parts">A</span>
+        <span class="logo-parts">A</span>
+        <span class="logo-parts">J</span>
+        <span class="logo-parts">A</span>
 
+    </h1>
+    <p>La ropa del mañana hoy XD</p>
+</div>
 <main>
     <div class="display-5 row align-items-center ">
         <div sec:authorize="isAuthenticated()" >
@@ -24,7 +41,9 @@
         <img src="img/camiseta-casual.png" class="d-block mx-auto my-auto py-2" height="300" alt="logo">
 
         <div sec:authorize="!isAuthenticated()" class="text-center gap-3 my-2">
+            <h3>
             <a th:href="@{/oauth2/authorization/auth0}" class="btn btn-primary py-2 "> Iniciar Sesión </a>
+            </h3>
         </div>
 
         <div sec:authorize="isAuthenticated()" class="text-center gap-3 my-2 " >
@@ -38,7 +57,7 @@
     </div>
 </main>
 
-
+<script src="app.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>

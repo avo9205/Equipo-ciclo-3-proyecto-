@@ -20,6 +20,10 @@
             <div th:each="empleados:${empleados}" class="card" style="width: 18rem;">
                 <img src="img/eevee.png" class="d-block mx-auto my-auto py-2" height="150" alt="empleado">
                 <div class="card-body">
+                    <div class="d-flex gap-1 justify-content-center" >
+                        <h4 class="fw-bold" > Id: </h4>
+                        <h4 th:text="${empleados.registroEmpleado}" class="card-title"> </h4>
+                    </div>
                     <h5 th:text="${empleados.nombreEmpleado}" class="card-title">Card title</h5>
                     <p th:text="${empleados.correo}" class="card-text"></p>
                     <p th:text="${empleados.cargo}" class="card-text"></p>
